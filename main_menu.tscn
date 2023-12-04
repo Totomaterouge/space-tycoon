@@ -1,0 +1,86 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqj67mhf2558w"]
+
+[ext_resource type="FontFile" uid="uid://713xbchv4sm8" path="res://Super Milk.ttf" id="1_cpmp6"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1_oafh8"]
+[ext_resource type="Texture2D" uid="uid://b6l7yqchybl3h" path="res://playbtn.png" id="2_p5cpk"]
+[ext_resource type="Texture2D" uid="uid://cy3kc0jxx8eno" path="res://earthbg.jpg" id="4_gmlt2"]
+
+[sub_resource type="GDScript" id="GDScript_kwmd1"]
+script/source = "extends Button
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+
+[node name="Main menu" type="Node2D"]
+script = ExtResource("1_oafh8")
+
+[node name="play_button" type="Button" parent="."]
+unique_name_in_owner = true
+top_level = true
+offset_left = 432.0
+offset_top = 152.0
+offset_right = 752.0
+offset_bottom = 280.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_cpmp6")
+theme_override_font_sizes/font_size = 50
+script = SubResource("GDScript_kwmd1")
+
+[node name="TextureRect" type="TextureRect" parent="play_button"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 24.0
+offset_right = 108.0
+offset_bottom = 104.0
+texture = ExtResource("2_p5cpk")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="play_button"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 24.0
+offset_right = 296.0
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("1_cpmp6")
+theme_override_font_sizes/font_size = 50
+text = "Jouer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="play_button"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -976.0
+offset_top = -448.0
+offset_right = 1120.0
+offset_bottom = 600.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_gmlt2")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[connection signal="pressed" from="play_button" to="." method="_on_play_button_pressed"]

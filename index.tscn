@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://8rlgq3lcpypm"]
+
+[ext_resource type="Script" path="res://index.gd" id="1_xu4xq"]
+
+[node name="Index" type="Node2D"]
+script = ExtResource("1_xu4xq")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Button" type="Button" parent="."]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 368.0
+offset_bottom = 120.0
+text = "Test"
